@@ -1,0 +1,20 @@
+doctype
+html
+  head
+    meta("charset=utf-8")
+    link(rel="stylesheet" href="css/index.css")
+    title 图片to64
+  body
+    div.content
+      h2 获取图片的base64码(粘贴截图版)
+      div.box
+        div.toolbox
+          button(class="btn",id="clearContent",style="margin-right:20px") 清空图片
+        input(type="text",id="pasteInput",class="paste_input",placeholder="截屏后粘贴到输入框中")
+      canvas(id="canvas",width=0,height=0,style="display:none")
+      span(id="info",class="info") 0*0
+        //- input(id="hiddenInput",class="hidden_input")
+        //- input(type="button",value="复制代码",class="btn")#copyCode
+        <!-- span 截图后点击输入框，然后粘贴，就能出现图片（缩略图），其地址是base64编码格式，本打算点击某按钮则复制该图片的地址，但发现clipboard的方法不兼容，又尝试弄一隐藏的输入框，发现容易卡死，所以作罢。 -->
+    span.switch#toPaste(data-text="拖拽版")
+    script(src="js/simple.js")
